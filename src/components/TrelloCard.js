@@ -1,15 +1,25 @@
 import React from 'react'
 import { Card, Typography, CardContent } from '@material-ui/core'
-
-const TrelloCard = ({ text }) => {
+import { Draggable } from 'react-beautiful-dnd'
+const TrelloCard = ({ text, id, index }) => {
     return (
-        <Card style={styles.cardContainer}>
-            <CardContent>
-                <Typography gutterBottom>
-                    {text}
-                </Typography>
-            </CardContent>
-        </Card>
+        <Draggable draggableId={String(id)} index={index}>
+            {(provided) => (
+                <div
+                    ref={provided.innerRef}
+                    {...provided.draggableProps}
+                    {...provided.dragHandleProps}
+                >
+                    <Card style={styles.cardContainer}>
+                        <CardContent>
+                            <Typography gutterBottom>
+                                {text}
+                            </Typography>
+                        </CardContent>
+                    </Card>
+                </div>
+            )}
+        </Draggable>
     )
 }
 
