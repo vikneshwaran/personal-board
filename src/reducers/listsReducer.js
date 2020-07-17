@@ -9,11 +9,13 @@ const initialState = [
         cards: [
             {
                 id: `card-${0}`,
-                text: 'Practical Presentation'
+                text: 'Practical Presentation',
+                desc: 'A note about presentation'
             },
             {
                 id: `card-${1}`,
-                text: 'Patch Updates'
+                text: 'Patch Updates',
+                desc: 'A note about updates on patches'
             }
         ]
     },
@@ -23,19 +25,23 @@ const initialState = [
         cards: [
             {
                 id: `card-${2}`,
-                text: 'Update swipe components'
+                text: 'Update swipe components',
+                desc: 'Details about swipe'
             },
             {
                 id: `card-${3}`,
-                text: 'Release request'
+                text: 'Release request',
+                desc: 'A note about Release'
             },
             {
                 id: `card-${4}`,
-                text: 'Add a looping animation'
+                text: 'Add a looping animation',
+                desc: 'A content about animation'
             },
             {
                 id: `card-${5}`,
-                text: 'Documentation for project'
+                text: 'Documentation for project',
+                desc: 'A note about Documentation'
             }
         ]
     }
@@ -69,6 +75,13 @@ const listsReducer = (state = initialState, action) => {
                 }
             })
             return newState
+        }
+
+        case CONSTANTS.DELETE_CARD: {
+            const { id } = action.payload;
+            const newState = state;
+            delete newState[id];
+            return newState;
         }
 
         case CONSTANTS.DRAG_HAPPENED:
