@@ -4,38 +4,38 @@ let cardID = 6
 
 const initialState = [
     {
-        title: "Project",
+        title: "Backlog",
         id: `list-${0}`,
         cards: [
             {
                 id: `card-${0}`,
-                text: 'project one'
+                text: 'Practical Presentation'
             },
             {
                 id: `card-${1}`,
-                text: 'project two'
+                text: 'Patch Updates'
             }
         ]
     },
     {
-        title: "In Progress",
+        title: "This Week ( w/c 17th July )",
         id: `list-${1}`,
         cards: [
             {
                 id: `card-${2}`,
-                text: 'WIP 1'
+                text: 'Update swipe components'
             },
             {
                 id: `card-${3}`,
-                text: 'WIP 2'
+                text: 'Release request'
             },
             {
                 id: `card-${4}`,
-                text: 'WIP 3'
+                text: 'Add a looping animation'
             },
             {
                 id: `card-${5}`,
-                text: 'WIP 4'
+                text: 'Documentation for project'
             }
         ]
     }

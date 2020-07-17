@@ -36,7 +36,7 @@ class App extends Component {
     return (
       <DragDropContext onDragEnd={this.onDragEnd}>
         <div className="App">
-          <h1>Personal Board - To Do List</h1>
+          <h1 style={{ 'color': '#086972' }}>Personal Board - To Do List</h1>
           <ListContainer>
             {lists.map(list => (
               <TrelloList listID={list.id} key={list.id} title={list.title} cards={list.cards} />

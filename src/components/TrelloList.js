@@ -5,7 +5,8 @@ import { Droppable } from 'react-beautiful-dnd'
 import styled from 'styled-components'
 
 const ListContainer = styled.div`
-    background-color: #cdcdcd;
+    background-color: #24a19c;
+    color: #fff;
     border-radius: 3px;
     width: 300px;
     height: 100%;

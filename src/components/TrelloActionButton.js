@@ -115,7 +115,7 @@ class TrelloActionButton extends Component {
                         variant="contained"
                         style={{
                             color: 'white',
-                            backgroundColor: '#5aac44'
+                            backgroundColor: '#ff5f40'
                         }}
                     >
                         {buttonTitle}{" "}
